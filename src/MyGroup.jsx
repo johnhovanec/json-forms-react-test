@@ -25,7 +25,7 @@ const MyGroupRenderer = (props) => {
   return (
     <Hidden xsUp={!visible}>
       <Accordion>
-        <p>JH Test</p>
+        <p>My Group</p>
         <AccordionSummary expandIcon={<ExpandMoreIcon />}>
           <Typography>{uischema.label}</Typography>
         </AccordionSummary>

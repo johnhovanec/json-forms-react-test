@@ -16,6 +16,160 @@
       "populationMin": "5,000"
     },
     "subCountySuppressionRules": {},
-    "omitNcdmData": true
+    "omitNcdmData": true,
+    "themes": [
+      {
+        "themeName": "status",
+        "defaultTabPath": "overview",
+        "themeTitle": "Status",
+        "themePath": "status",
+        "tabs": {
+          "overview": {
+            "tabTitle": "Overview",
+            "tabPath": "overview",
+            "contentType": "chart",
+            "exportTitle": "Rate of Birth Defects (2016-2020)",
+            "chartType": "comparison",
+            "selectable": false,
+            "baseline": "000",
+            "defaultSelection": "2020",
+            "defaultSetNames": ["rate"],
+            "info": {
+              "title": "Birth Defects",
+              "id": "chart-birth-defects",
+              "subtitle": "Age-adjusted rate of hospitalization per 10,000"
+            },
+            "chartTitle": "Rate of Birth Defects (2016-2020)",
+            "displayChartTitle": true,
+            "chartYAxisField": "chartLabel",
+            "displayChartDiscontinuityGraphic": false,
+            "displayXAxisLabel": true,
+            "xAxisLabel": "Rate of birth defect per 10,000 live births",
+            "chartDataSets": ["rate", "individualRate"],
+            "url": "${process.env.REACT_APP_EPHT_API}/BirthDefects/GetRate?jurisdiction=000",
+            "urlParams": [],
+            "chartConfig": [
+              {
+                "label": "All Birth Defects",
+                "setName": "rate",
+                "fill": false,
+                "order": 1,
+                "data": []
+              },
+              {
+                "label": "Individual Birth Defects",
+                "setName": "individualRate",
+                "fill": false,
+                "order": 2,
+                "data": []
+              }
+            ],
+            "columnHeaders": [
+              {
+                "field": "period",
+                "headerName": "Period",
+                "width": 125,
+                "align": "left",
+                "headerAlign": "left"
+              },
+              {
+                "field": "chartLabel",
+                "headerName": "Type",
+                "width": 225,
+                "align": "left",
+                "headerAlign": "left"
+              },
+              {
+                "field": "rate",
+                "headerName": "Rate",
+                "width": 125,
+                "customFormat": 2,
+                "align": "left",
+                "headerAlign": "left"
+              }
+            ],
+            "tableTitle": "Rate of Birth Defects"
+          }
+        },
+        "about": " ",
+        "resources": " "
+      },
+      {
+        "themeName": "statusII",
+        "defaultTabPath": "overview",
+        "themeTitle": "StatusII",
+        "themePath": "statusII",
+        "tabs": {
+          "overview": {
+            "tabTitle": "Overview",
+            "tabPath": "overview",
+            "contentType": "chart",
+            "exportTitle": "Rate of Birth Defects (2016-2020)",
+            "chartType": "comparison",
+            "selectable": false,
+            "baseline": "000",
+            "defaultSelection": "2020",
+            "defaultSetNames": ["rate"],
+            "info": {
+              "title": "Birth Defects",
+              "id": "chart-birth-defects",
+              "subtitle": "Age-adjusted rate of hospitalization per 10,000"
+            },
+            "chartTitle": "Rate of Birth Defects (2016-2020)",
+            "displayChartTitle": true,
+            "chartYAxisField": "chartLabel",
+            "displayChartDiscontinuityGraphic": false,
+            "displayXAxisLabel": true,
+            "xAxisLabel": "Rate of birth defect per 10,000 live births",
+            "chartDataSets": ["rate", "individualRate"],
+            "url": "${process.env.REACT_APP_EPHT_API}/BirthDefects/GetRate?jurisdiction=000",
+            "urlParams": [],
+            "chartConfig": [
+              {
+                "label": "All Birth Defects",
+                "setName": "rate",
+                "fill": false,
+                "order": 1,
+                "data": []
+              },
+              {
+                "label": "Individual Birth Defects",
+                "setName": "individualRate",
+                "fill": false,
+                "order": 2,
+                "data": []
+              }
+            ],
+            "columnHeaders": [
+              {
+                "field": "period",
+                "headerName": "Period",
+                "width": 125,
+                "align": "left",
+                "headerAlign": "left"
+              },
+              {
+                "field": "chartLabel",
+                "headerName": "Type",
+                "width": 225,
+                "align": "left",
+                "headerAlign": "left"
+              },
+              {
+                "field": "rate",
+                "headerName": "Rate",
+                "width": 125,
+                "customFormat": 2,
+                "align": "left",
+                "headerAlign": "left"
+              }
+            ],
+            "tableTitle": "Rate of Birth Defects"
+          }
+        },
+        "about": " ",
+        "resources": " "
+      }
+    ]
   }
 }

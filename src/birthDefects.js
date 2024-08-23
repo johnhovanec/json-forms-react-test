@@ -26,9 +26,6 @@ export const coreSchema = {
       minLength: 1,
       description: "Please enter the defaultTabPath",
     },
-    vegetarian: {
-      type: "boolean",
-    },
     birthDate: {
       type: "string",
       format: "date",
@@ -63,9 +60,6 @@ export const schema = {
         },
       },
       required: ["age", "topicPath", "category"],
-    },
-    vegetarian: {
-      type: "boolean",
     },
     birthDate: {
       type: "string",
@@ -116,6 +110,27 @@ export const schema = {
     },
     omitNcdmData: {
       type: "boolean",
+    },
+    themes: {
+      type: "array",
+      title: "Themes",
+      items: {
+        type: "object",
+        properties: {
+          themeName: {
+            type: "string",
+          },
+          defaultTabPath: {
+            type: "string",
+          },
+          themeTitle: {
+            type: "string",
+          },
+          themePath: {
+            type: "string",
+          },
+        },
+      },
     },
   },
   required: ["nationality", "category"],
@@ -260,26 +275,37 @@ export const uischema = {
         },
       ],
     },
+    {
+      type: "VerticalLayout",
+      elements: [
+        {
+          type: "Control",
+          scope: "#/properties/themes",
+          options: {
+            detail: {
+              type: "HorizontalLayout",
+              elements: [
+                {
+                  type: "Control",
+                  scope: "#/properties/themeName",
+                },
+                {
+                  type: "Control",
+                  scope: "#/properties/defaultTabPath",
+                },
+                {
+                  type: "Control",
+                  scope: "#/properties/themeTitle",
+                },
+                {
+                  type: "Control",
+                  scope: "#/properties/themePath",
+                },
+              ],
+            },
+          },
+        },
+      ],
+    },
   ],
 };
-
-// export const data = {
-//   topic: "birth Defects",
-//   topicTitle: "Birth Defects",
-//   topicPath: "birthDefects",
-//   category: "health",
-//   defaultTabPath: "status",
-//   vegetarian: false,
-//   birthDate: "1935-05-21",
-//   personalData: {
-//     age: 14,
-//   },
-//   postalCode: "12345",
-//   nationality: "DE",
-//   themeOverviews: [
-//     {
-//       theme: "Status",
-//       text: "Provides a detailed view of birth defects in Maryland.",
-//     },
-//   ],
-// };

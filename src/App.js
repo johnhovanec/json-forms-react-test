@@ -8,6 +8,7 @@ import React, { useState } from "react";
 import { JsonForms } from "@jsonforms/react";
 import MyGroupRenderer from "./MyGroup";
 import { myGroupTester } from "./myGroupTester";
+import { init } from "@jsonforms/core";
 
 // list of renderers declared outside the App component
 const renderers = [
@@ -33,6 +34,12 @@ function App() {
         cells={materialCells}
         onChange={({ data, errors }) => setData(data)}
       ></JsonForms>
+      <div>
+        $$:{" "}
+        {data.themes.map((x) => {
+          console.log(x.themeName);
+        })}
+      </div>
     </div>
   );
 }
