@@ -14,7 +14,8 @@ export const coreSchema = {
     topicPath: {
       type: "string",
       minLength: 1,
-      description: "Please enter the topic path",
+      pattern: "^[A-Za-z_-][A-Za-z0-9_-]*$",
+      description: "Please enter the topic path with no spaces",
     },
     category: {
       type: "string",
