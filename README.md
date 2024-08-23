@@ -1,6 +1,5 @@
-# json-forms-react-test
-Forms application using JSON Schema, JSON Forms, and React.  
-CRUD application utilizing an existing, deeply nested JSON structure.  
+# Getting Started with Create React App
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
