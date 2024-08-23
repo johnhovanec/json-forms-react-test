@@ -14,6 +14,8 @@
     "countySuppressionRules": {
       "range": "1 to 10",
       "populationMin": "5,000"
-    }
+    },
+    "subCountySuppressionRules": {},
+    "omitNcdmData": true
   }
 }

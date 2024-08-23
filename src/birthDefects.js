@@ -99,6 +99,23 @@ export const schema = {
       },
       required: ["age", "topicPath", "category"],
     },
+    subCountySuppressionRules: {
+      type: "object",
+      properties: {
+        range: {
+          type: "string",
+          description: "Please enter the range.",
+        },
+        populationMin: {
+          type: "string",
+          description: "Please enter the min population.",
+        },
+      },
+      required: ["age", "topicPath", "category"],
+    },
+    omitNcdmData: {
+      type: "boolean",
+    },
   },
   required: ["nationality", "category"],
 };
@@ -191,11 +208,43 @@ export const uischema = {
     },
     {
       type: "Label",
+      text: "Subcounty Suppression Rules",
+    },
+    {
+      type: "VerticalLayout",
+      elements: [
+        {
+          type: "Control",
+          scope: "#/properties/subCountySuppressionRules",
+          options: {
+            detail: {
+              type: "VerticalLayout",
+              elements: [
+                {
+                  type: "Control",
+                  scope: "#/properties/range",
+                },
+                {
+                  type: "Control",
+                  scope: "#/properties/populationMin",
+                },
+              ],
+            },
+          },
+        },
+      ],
+    },
+    {
+      type: "Label",
       text: "More Additional Information",
     },
     {
       type: "HorizontalLayout",
       elements: [
+        {
+          type: "Control",
+          scope: "#/properties/omitNcdmData",
+        },
         {
           type: "Control",
           scope: "#/properties/personalData/properties/height",
