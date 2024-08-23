@@ -1,0 +1,18 @@
+.App {
+  text-align: center;
+  margin: 2rem;
+  width: 75%;
+}
+
+h2 {
+  margin-bottom: 2rem;
+}
+
+h6 {
+  padding: 1rem;
+  color: #333;
+}
+
+.MuiGrid-root {
+  margin: 0.5rem;
+}

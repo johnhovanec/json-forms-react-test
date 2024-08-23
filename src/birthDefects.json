@@ -1,0 +1,19 @@
+{
+  "birthDefects": {
+    "topic": "birth Defects",
+    "topicTitle": "Birth Defects",
+    "topicPath": "birthDefects",
+    "category": "health",
+    "defaultTabPath": "status",
+    "themeOverviews": [
+      {
+        "theme": "Status",
+        "text": "Provides a detailed view of birth defects in Maryland."
+      }
+    ],
+    "countySuppressionRules": {
+      "range": "1 to 10",
+      "populationMin": "5,000"
+    }
+  }
+}
