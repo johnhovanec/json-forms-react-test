@@ -26,15 +26,10 @@ export const coreSchema = {
       minLength: 1,
       description: "Please enter the defaultTabPath",
     },
-    birthDate: {
-      type: "string",
-      format: "date",
-      description: "Please enter your birth date.",
-    },
-    nationality: {
-      type: "string",
-      enum: ["DE", "IT", "JP", "US", "RU", "Other"],
-    },
+    // nationality: {
+    //   type: "string",
+    //   enum: ["DE", "IT", "JP", "US", "RU", "Other"],
+    // },
   },
 };
 
@@ -45,25 +40,21 @@ export const schema = {
     personalData: {
       type: "object",
       properties: {
-        age: {
-          type: "integer",
-          description: "Please enter your age.",
-        },
-        height: {
-          type: "number",
-        },
-        drivingSkill: {
-          type: "number",
-          maximum: 10,
-          minimum: 1,
-          default: 7,
-        },
+        // age: {
+        //   type: "integer",
+        //   description: "Please enter your age.",
+        // },
+        // height: {
+        //   type: "number",
+        // },
+        // drivingSkill: {
+        //   type: "number",
+        //   maximum: 10,
+        //   minimum: 1,
+        //   default: 7,
+        // },
       },
-      required: ["age", "topicPath", "category"],
-    },
-    birthDate: {
-      type: "string",
-      format: "date",
+      required: ["topicPath", "category"],
     },
     themeOverviews: {
       type: "array",
@@ -92,7 +83,7 @@ export const schema = {
           description: "Please enter the min population.",
         },
       },
-      required: ["age", "topicPath", "category"],
+      required: ["topicPath", "category"],
     },
     subCountySuppressionRules: {
       type: "object",
@@ -106,7 +97,7 @@ export const schema = {
           description: "Please enter the min population.",
         },
       },
-      required: ["age", "topicPath", "category"],
+      required: ["topicPath", "category"],
     },
     omitNcdmData: {
       type: "boolean",
@@ -129,11 +120,23 @@ export const schema = {
           themePath: {
             type: "string",
           },
+          tabs: {
+            type: "array",
+            title: "Tabs",
+            items: {
+              type: "object",
+              properties: {
+                tabPath: {
+                  type: "string",
+                },
+              },
+            },
+          },
         },
       },
     },
   },
-  required: ["nationality", "category"],
+  required: ["category"],
 };
 
 export const uischema = {
@@ -261,18 +264,14 @@ export const uischema = {
           type: "Control",
           scope: "#/properties/omitNcdmData",
         },
-        {
-          type: "Control",
-          scope: "#/properties/personalData/properties/height",
-        },
-        {
-          type: "Control",
-          scope: "#/properties/nationality",
-        },
-        {
-          type: "Control",
-          scope: "#/properties/personalData/properties/age",
-        },
+        // {
+        //   type: "Control",
+        //   scope: "#/properties/personalData/properties/height",
+        // },
+        // {
+        //   type: "Control",
+        //   scope: "#/properties/personalData/properties/age",
+        // },
       ],
     },
     {

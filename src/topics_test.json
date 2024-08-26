@@ -19,12 +19,14 @@
     "subCountySuppressionRules": null,
     "omitNcdmData": true,
     "themes": {
-      // 1. Converting this to an array of objects. A nested array is a pain with Json Forms.
+      // 1. Converting themes to an array of objects. A nested array is a pain with Json Forms.
       // 2. Also looking to create a new property named themeName and remove the wrapping object name
       "status": {
         "defaultTabPath": "overview",
         "themeTitle": "Status",
         "themePath": "status",
+        // 1. Converting tabs to an array of objects. A nested array is a pain with Json Forms.
+        // 2. Also looking to create a new property named tabName and remove the wrapping object name
         "tabs": {
           "overview": {
             "tabTitle": "Overview",

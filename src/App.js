@@ -9,6 +9,7 @@ import { JsonForms } from "@jsonforms/react";
 import MyGroupRenderer from "./MyGroup";
 import { myGroupTester } from "./myGroupTester";
 import { init } from "@jsonforms/core";
+import Button from "@mui/material/Button";
 
 // list of renderers declared outside the App component
 const renderers = [
@@ -35,10 +36,17 @@ function App() {
         onChange={({ data, errors }) => setData(data)}
       ></JsonForms>
       <div>
-        $$:{" "}
-        {data.themes.map((x) => {
+        <Button
+          variant="contained"
+          onClick={() => {
+            console.log("clicked: form data", data);
+          }}
+        >
+          Submit
+        </Button>
+        {/* {data.themes.map((x) => {
           console.log(x.themeName);
-        })}
+        })} */}
       </div>
     </div>
   );

@@ -23,8 +23,9 @@
         "defaultTabPath": "overview",
         "themeTitle": "Status",
         "themePath": "status",
-        "tabs": {
-          "overview": {
+        "tabs": [
+          {
+            "tabName": "overview",
             "tabTitle": "Overview",
             "tabPath": "overview",
             "contentType": "chart",
@@ -90,7 +91,7 @@
             ],
             "tableTitle": "Rate of Birth Defects"
           }
-        },
+        ],
         "about": " ",
         "resources": " "
       },
@@ -99,8 +100,9 @@
         "defaultTabPath": "overview",
         "themeTitle": "StatusII",
         "themePath": "statusII",
-        "tabs": {
-          "overview": {
+        "tabs": [
+          {
+            "tabName": "overview",
             "tabTitle": "Overview",
             "tabPath": "overview",
             "contentType": "chart",
@@ -166,7 +168,7 @@
             ],
             "tableTitle": "Rate of Birth Defects"
           }
-        },
+        ],
         "about": " ",
         "resources": " "
       }
