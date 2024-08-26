@@ -120,6 +120,14 @@ export const schema = {
           themePath: {
             type: "string",
           },
+          about: {
+            type: "string",
+            description: "Please enter the About section content",
+          },
+          resources: {
+            type: "string",
+            description: "Please enter the Resources section content",
+          },
           tabs: {
             type: "array",
             title: "Tabs",
@@ -211,14 +219,8 @@ export const schema = {
                         type: "string",
                       },
                       valueKey: {
+                        // TODO: In some topics this is name 'value'
                         type: "string",
-                      },
-                      data: {
-                        type: "array",
-                        items: {
-                          type: "string",
-                          readOnly: true,
-                        },
                       },
                     },
                   },
@@ -240,8 +242,44 @@ export const schema = {
                       order: {
                         type: "integer",
                       },
+                      data: {
+                        // TODO: Need to ensure this field does not get updated
+                        type: "array",
+                        items: {
+                          type: "string",
+                          description:
+                            "This field is readonly, do not try to update!",
+                          readOnly: true,
+                        },
+                      },
                     },
                   },
+                },
+                columnHeaders: {
+                  type: "array",
+                  items: {
+                    type: "object",
+                    properties: {
+                      field: {
+                        type: "string",
+                      },
+                      headerName: {
+                        type: "string",
+                      },
+                      width: {
+                        type: "integer",
+                      },
+                      align: {
+                        enum: ["left", "center", "right"],
+                      },
+                      headerAlign: {
+                        enum: ["left", "center", "right"],
+                      },
+                    },
+                  },
+                },
+                tableTitle: {
+                  type: "string",
                 },
               },
             },
