@@ -126,8 +126,52 @@ export const schema = {
             items: {
               type: "object",
               properties: {
+                tabName: {
+                  type: "string",
+                },
+                tabTitle: {
+                  type: "string",
+                },
                 tabPath: {
                   type: "string",
+                },
+                contentType: {
+                  type: "string",
+                },
+                exportTitle: {
+                  type: "string",
+                },
+                chartType: {
+                  type: "string",
+                },
+                selectable: {
+                  type: "boolean",
+                },
+                baseline: {
+                  type: "string",
+                },
+                defaultSelection: {
+                  type: "string",
+                },
+                defaultSetNames: {
+                  type: "array",
+                  items: {
+                    type: "string",
+                  },
+                },
+                info: {
+                  type: "object",
+                  properties: {
+                    title: {
+                      type: "string",
+                    },
+                    id: {
+                      type: "string",
+                    },
+                    subtitle: {
+                      type: "string",
+                    },
+                  },
                 },
               },
             },

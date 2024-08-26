@@ -6,8 +6,8 @@ import {
 } from "@jsonforms/material-renderers";
 import React, { useState } from "react";
 import { JsonForms } from "@jsonforms/react";
-import MyGroupRenderer from "./MyGroup";
-import { myGroupTester } from "./myGroupTester";
+//import MyGroupRenderer from "./MyGroup";
+//import { myGroupTester } from "./myGroupTester";
 import { init } from "@jsonforms/core";
 import Button from "@mui/material/Button";
 
@@ -15,7 +15,7 @@ import Button from "@mui/material/Button";
 const renderers = [
   ...materialRenderers,
   //register custom renderers
-  { tester: myGroupTester, renderer: MyGroupRenderer },
+  //{ tester: myGroupTester, renderer: MyGroupRenderer },
 ];
 
 const { birthDefects } = require("./birthDefects.json");
@@ -29,9 +29,9 @@ function App() {
       <h2>JSON Forms React Test</h2>
       <JsonForms
         schema={schema}
-        uischema={uischema}
         data={data}
         renderers={renderers}
+        /* We purposefully omit a ui-schema so JSONForms will dynamically create one */
         cells={materialCells}
         onChange={({ data, errors }) => setData(data)}
       ></JsonForms>
