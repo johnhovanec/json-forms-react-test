@@ -26,10 +26,6 @@ export const coreSchema = {
       minLength: 1,
       description: "Please enter the defaultTabPath",
     },
-    // nationality: {
-    //   type: "string",
-    //   enum: ["DE", "IT", "JP", "US", "RU", "Other"],
-    // },
   },
 };
 
@@ -37,25 +33,6 @@ export const schema = {
   type: "object",
   properties: {
     ...coreSchema.properties,
-    personalData: {
-      type: "object",
-      properties: {
-        // age: {
-        //   type: "integer",
-        //   description: "Please enter your age.",
-        // },
-        // height: {
-        //   type: "number",
-        // },
-        // drivingSkill: {
-        //   type: "number",
-        //   maximum: 10,
-        //   minimum: 1,
-        //   default: 7,
-        // },
-      },
-      //required: ["topicPath", "category"],
-    },
     themeOverviews: {
       type: "array",
       title: "Theme Overviews",
@@ -291,172 +268,172 @@ export const schema = {
   required: ["category"],
 };
 
-export const uischema = {
-  type: "VerticalLayout",
-  elements: [
-    {
-      type: "HorizontalLayout",
-      elements: [
-        {
-          type: "Control",
-          scope: "#/properties/topic",
-        },
-        {
-          type: "Control",
-          scope: "#/properties/topicTitle",
-        },
-        {
-          type: "Control",
-          scope: "#/properties/topicPath",
-        },
-      ],
-    },
-    {
-      type: "HorizontalLayout",
-      elements: [
-        {
-          type: "Control",
-          scope: "#/properties/category",
-        },
-        {
-          type: "Control",
-          scope: "#/properties/defaultTabPath",
-        },
-      ],
-    },
-    {
-      type: "VerticalLayout",
-      elements: [
-        {
-          type: "Control",
-          scope: "#/properties/themeOverviews",
-          options: {
-            elementLabelProp: "theme",
-            detail: {
-              type: "VerticalLayout",
-              elements: [
-                {
-                  type: "Control",
-                  scope: "#/properties/theme",
-                },
-                {
-                  type: "Control",
-                  scope: "#/properties/text",
-                },
-              ],
-            },
-          },
-        },
-      ],
-    },
-    {
-      type: "Label",
-      text: "County Suppression Rules",
-    },
-    {
-      type: "VerticalLayout",
-      elements: [
-        {
-          type: "Control",
-          scope: "#/properties/countySuppressionRules",
-          options: {
-            detail: {
-              type: "VerticalLayout",
-              elements: [
-                {
-                  type: "Control",
-                  scope: "#/properties/range",
-                },
-                {
-                  type: "Control",
-                  scope: "#/properties/populationMin",
-                },
-              ],
-            },
-          },
-        },
-      ],
-    },
-    {
-      type: "Label",
-      text: "Subcounty Suppression Rules",
-    },
-    {
-      type: "VerticalLayout",
-      elements: [
-        {
-          type: "Control",
-          scope: "#/properties/subCountySuppressionRules",
-          options: {
-            detail: {
-              type: "VerticalLayout",
-              elements: [
-                {
-                  type: "Control",
-                  scope: "#/properties/range",
-                },
-                {
-                  type: "Control",
-                  scope: "#/properties/populationMin",
-                },
-              ],
-            },
-          },
-        },
-      ],
-    },
-    {
-      type: "Label",
-      text: "More Additional Information",
-    },
-    {
-      type: "HorizontalLayout",
-      elements: [
-        {
-          type: "Control",
-          scope: "#/properties/omitNcdmData",
-        },
-        // {
-        //   type: "Control",
-        //   scope: "#/properties/personalData/properties/height",
-        // },
-        // {
-        //   type: "Control",
-        //   scope: "#/properties/personalData/properties/age",
-        // },
-      ],
-    },
-    {
-      type: "VerticalLayout",
-      elements: [
-        {
-          type: "Control",
-          scope: "#/properties/themes",
-          options: {
-            detail: {
-              type: "HorizontalLayout",
-              elements: [
-                {
-                  type: "Control",
-                  scope: "#/properties/themeName",
-                },
-                {
-                  type: "Control",
-                  scope: "#/properties/defaultTabPath",
-                },
-                {
-                  type: "Control",
-                  scope: "#/properties/themeTitle",
-                },
-                {
-                  type: "Control",
-                  scope: "#/properties/themePath",
-                },
-              ],
-            },
-          },
-        },
-      ],
-    },
-  ],
-};
+// export const uischema = {
+//   type: "VerticalLayout",
+//   elements: [
+//     {
+//       type: "HorizontalLayout",
+//       elements: [
+//         {
+//           type: "Control",
+//           scope: "#/properties/topic",
+//         },
+//         {
+//           type: "Control",
+//           scope: "#/properties/topicTitle",
+//         },
+//         {
+//           type: "Control",
+//           scope: "#/properties/topicPath",
+//         },
+//       ],
+//     },
+//     {
+//       type: "HorizontalLayout",
+//       elements: [
+//         {
+//           type: "Control",
+//           scope: "#/properties/category",
+//         },
+//         {
+//           type: "Control",
+//           scope: "#/properties/defaultTabPath",
+//         },
+//       ],
+//     },
+//     {
+//       type: "VerticalLayout",
+//       elements: [
+//         {
+//           type: "Control",
+//           scope: "#/properties/themeOverviews",
+//           options: {
+//             elementLabelProp: "theme",
+//             detail: {
+//               type: "VerticalLayout",
+//               elements: [
+//                 {
+//                   type: "Control",
+//                   scope: "#/properties/theme",
+//                 },
+//                 {
+//                   type: "Control",
+//                   scope: "#/properties/text",
+//                 },
+//               ],
+//             },
+//           },
+//         },
+//       ],
+//     },
+//     {
+//       type: "Label",
+//       text: "County Suppression Rules",
+//     },
+//     {
+//       type: "VerticalLayout",
+//       elements: [
+//         {
+//           type: "Control",
+//           scope: "#/properties/countySuppressionRules",
+//           options: {
+//             detail: {
+//               type: "VerticalLayout",
+//               elements: [
+//                 {
+//                   type: "Control",
+//                   scope: "#/properties/range",
+//                 },
+//                 {
+//                   type: "Control",
+//                   scope: "#/properties/populationMin",
+//                 },
+//               ],
+//             },
+//           },
+//         },
+//       ],
+//     },
+//     {
+//       type: "Label",
+//       text: "Subcounty Suppression Rules",
+//     },
+//     {
+//       type: "VerticalLayout",
+//       elements: [
+//         {
+//           type: "Control",
+//           scope: "#/properties/subCountySuppressionRules",
+//           options: {
+//             detail: {
+//               type: "VerticalLayout",
+//               elements: [
+//                 {
+//                   type: "Control",
+//                   scope: "#/properties/range",
+//                 },
+//                 {
+//                   type: "Control",
+//                   scope: "#/properties/populationMin",
+//                 },
+//               ],
+//             },
+//           },
+//         },
+//       ],
+//     },
+//     {
+//       type: "Label",
+//       text: "More Additional Information",
+//     },
+//     {
+//       type: "HorizontalLayout",
+//       elements: [
+//         {
+//           type: "Control",
+//           scope: "#/properties/omitNcdmData",
+//         },
+//         // {
+//         //   type: "Control",
+//         //   scope: "#/properties/personalData/properties/height",
+//         // },
+//         // {
+//         //   type: "Control",
+//         //   scope: "#/properties/personalData/properties/age",
+//         // },
+//       ],
+//     },
+//     {
+//       type: "VerticalLayout",
+//       elements: [
+//         {
+//           type: "Control",
+//           scope: "#/properties/themes",
+//           options: {
+//             detail: {
+//               type: "HorizontalLayout",
+//               elements: [
+//                 {
+//                   type: "Control",
+//                   scope: "#/properties/themeName",
+//                 },
+//                 {
+//                   type: "Control",
+//                   scope: "#/properties/defaultTabPath",
+//                 },
+//                 {
+//                   type: "Control",
+//                   scope: "#/properties/themeTitle",
+//                 },
+//                 {
+//                   type: "Control",
+//                   scope: "#/properties/themePath",
+//                 },
+//               ],
+//             },
+//           },
+//         },
+//       ],
+//     },
+//   ],
+// };
