@@ -54,7 +54,7 @@ export const schema = {
         //   default: 7,
         // },
       },
-      required: ["topicPath", "category"],
+      //required: ["topicPath", "category"],
     },
     themeOverviews: {
       type: "array",
@@ -161,6 +161,7 @@ export const schema = {
                 },
                 info: {
                   type: "object",
+                  title: "Chart Info",
                   properties: {
                     title: {
                       type: "string",
@@ -170,6 +171,75 @@ export const schema = {
                     },
                     subtitle: {
                       type: "string",
+                    },
+                  },
+                },
+                chartTitle: {
+                  type: "string",
+                },
+                displayChartTitle: {
+                  type: "boolean",
+                },
+                chartYAxisField: {
+                  type: "string",
+                },
+                displayChartDiscontinuityGraphic: {
+                  type: "boolean",
+                },
+                displayXAxisLabel: {
+                  type: "boolean",
+                },
+                xAxisLabel: {
+                  type: "string",
+                },
+                chartDataSets: {
+                  type: "array",
+                  items: {
+                    type: "string",
+                  },
+                },
+                url: {
+                  type: "string",
+                },
+                urlParams: {
+                  type: "array",
+                  title: "Url Params",
+                  items: {
+                    type: "object",
+                    properties: {
+                      param: {
+                        type: "string",
+                      },
+                      valueKey: {
+                        type: "string",
+                      },
+                      data: {
+                        type: "array",
+                        items: {
+                          type: "string",
+                          readOnly: true,
+                        },
+                      },
+                    },
+                  },
+                },
+                chartConfig: {
+                  type: "array",
+                  items: {
+                    type: "object",
+                    properties: {
+                      label: {
+                        type: "string",
+                      },
+                      setName: {
+                        type: "string",
+                      },
+                      fill: {
+                        type: "boolean",
+                      },
+                      order: {
+                        type: "integer",
+                      },
                     },
                   },
                 },

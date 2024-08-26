@@ -1,5 +1,5 @@
 import "./App.css";
-import { schema, uischema } from "./birthDefects";
+import { schema } from "./birthDefects";
 import {
   materialRenderers,
   materialCells,
