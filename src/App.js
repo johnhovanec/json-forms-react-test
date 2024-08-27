@@ -6,17 +6,10 @@ import {
 } from "@jsonforms/material-renderers";
 import React, { useState } from "react";
 import { JsonForms } from "@jsonforms/react";
-//import MyGroupRenderer from "./MyGroup";
-//import { myGroupTester } from "./myGroupTester";
-import { init } from "@jsonforms/core";
 import Button from "@mui/material/Button";
 
 // list of renderers declared outside the App component
-const renderers = [
-  ...materialRenderers,
-  //register custom renderers
-  //{ tester: myGroupTester, renderer: MyGroupRenderer },
-];
+const renderers = [...materialRenderers];
 
 const { birthDefects } = require("./birthDefects.json");
 
@@ -44,9 +37,6 @@ function App() {
         >
           Submit
         </Button>
-        {/* {data.themes.map((x) => {
-          console.log(x.themeName);
-        })} */}
       </div>
     </div>
   );
