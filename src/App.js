@@ -29,7 +29,7 @@ function App() {
       <h2>JSON Forms React Test</h2>
       <JsonForms
         schema={schema}
-        data={null}
+        data={data}
         renderers={renderers}
         /* We purposefully omit a ui-schema so JSONForms will dynamically create one */
         cells={materialCells}

@@ -66,11 +66,11 @@ export const schema = {
       type: "object",
       properties: {
         range: {
-          type: "string",
+          type: ["string", "null"],
           description: "Please enter the range.",
         },
         populationMin: {
-          type: "string",
+          type: ["string", "null"],
           description: "Please enter the min population.",
         },
       },
@@ -121,7 +121,7 @@ export const schema = {
                   type: "string",
                 },
                 contentType: {
-                  type: "string",
+                  enum: ["map", "chart", "table", "ncdm"],
                 },
                 exportTitle: {
                   type: "string",
@@ -130,7 +130,7 @@ export const schema = {
                   type: "string",
                 },
                 selectable: {
-                  type: "boolean",
+                  type: ["boolean", "null"],
                 },
                 baseline: {
                   type: "string",
