@@ -29,9 +29,9 @@ function App() {
       <h2>JSON Forms React Test</h2>
       <JsonForms
         schema={schema}
-        data={data}
+        data={data} // To create a new topic set = {null}
         renderers={renderers}
-        /* We purposefully omit a ui-schema so JSONForms will dynamically create one */
+        /* uischema = {uischema} We purposefully omit a ui-schema so JSONForms will dynamically create one */
         cells={materialCells}
         onChange={({ data, errors }) => setData(data)}
       ></JsonForms>
